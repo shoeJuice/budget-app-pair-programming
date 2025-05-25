@@ -1,0 +1,11 @@
+
+enum BudgetActions {
+    ADD_BUDGET = 'ADD_BUDGET',
+    DELETE_BUDGET = 'DELETE_BUDGET',
+    UPDATE_BUDGET = 'UPDATE_BUDGET',
+    ADD_EXPENSE = 'ADD_EXPENSE',
+    DELETE_EXPENSE = 'DELETE_EXPENSE',
+    UPDATE_EXPENSE = 'UPDATE_EXPENSE',
+}
+
+export { BudgetActions };

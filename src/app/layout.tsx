@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Provider from "@/modules/chakraProvider/components/Provider";
+import BudgetProvider from "@/context/BudgetContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Provider>{children}</Provider>
+        <Provider>
+          <BudgetProvider>{children}</BudgetProvider>
+        </Provider>
       </body>
     </html>
   );
