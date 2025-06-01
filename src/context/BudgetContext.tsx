@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * @fileoverview This file contains the main context for the Budget application.
  * It allows for managing the state of the application from a single source of truth, preventing codesmells like prop drilling.
