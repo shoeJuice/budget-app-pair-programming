@@ -1,0 +1,6 @@
+.app-navbar {
+    background-color: #260F26;
+    padding: 10px;
+    width: 15%;
+    flex-direction: column;
+}
