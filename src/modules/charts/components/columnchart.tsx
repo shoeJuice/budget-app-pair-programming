@@ -5,35 +5,35 @@ import { Chart } from 'react-google-charts'
 import { ChartType } from '../chartConstants';
 import styles from './chart.module.css';
 
-type ChartData = [string, number][];
+type ChartData = [string, number, number][];
 interface ChartProps {
   title?: string;
   data: ChartData;
 }
 
-const PieChart = ({ title, data }: ChartProps) => {
+const ColumnChart = ({ title, data }: ChartProps) => {
   const options = {
     title,
-    is3D: false,
     legend: { position: LegendPosition.BOTTOM },
-    slices: {
-      0: { color: Colors.emerald },
-      1: { color: Colors.mint },
-      2: { color: Colors.yinMnBlue },
-      3: { color: Colors.spaceCadet },
-      4: { color: Colors.darkPurple },
+    colors: [Colors.emerald, Colors.yinMnBlue],
+    hAxis: {
+      title: 'Month',
     },
+    vAxis: {
+      title: 'Amount ($)',
+    },
+    bar: { groupWidth: '50%' },
   };
 
   return (
     <div className={styles.chartWrapper}>
       <Chart
-        chartType="PieChart"
-        data={[['Category', 'Amount'], ...data]}
+        chartType="ColumnChart"
+        data={[['Month', 'Income', 'Expenses'], ...data]}
         options={options}
       />
     </div>
   )
 }
 
-export default PieChart
+export default ColumnChart

@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import styles from "../layout.module.css";
-import LayoutSelectors from "../selectors";
+import { LayoutSelectors } from "../selectors";
 import { Routes } from "../routes";
 import NavLink from "./NavLink";
 

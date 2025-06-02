@@ -1,5 +1,6 @@
-enum LayoutSelectors {
-    NAVBAR = 'app-navbar',
-}
+const LayoutSelectors = {
+  NAVBAR: 'app-navbar',
+} as const;
 
-export default LayoutSelectors;
+export type LayoutSelector = typeof LayoutSelectors[keyof typeof LayoutSelectors];
+export { LayoutSelectors };

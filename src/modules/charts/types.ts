@@ -1,0 +1,1 @@
+type ChartData = [string, number][];

@@ -35,8 +35,17 @@ a {
   text-decoration: none;
 }
 
+.main-container {
+  background-color: white;
+  padding-block: 25px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+
+  .main-container {
+    background-color: #171717;
   }
 }

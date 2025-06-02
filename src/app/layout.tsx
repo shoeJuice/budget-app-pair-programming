@@ -4,6 +4,9 @@ import "./globals.css";
 
 import Provider from "@/modules/chakraProvider/components/Provider";
 import BudgetProvider from "@/context/BudgetContext";
+import { Container, Flex } from "@chakra-ui/react";
+import Navbar from "@/modules/layout/components/Navbar";
+import GlobalSelectors from "@/globalSelectors";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +32,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
-          <BudgetProvider>{children}</BudgetProvider>
+          <BudgetProvider>
+            <Flex height='100vh'>
+              <Navbar />
+              <Container className={GlobalSelectors.MAIN_CONTAINER}>{children}</Container>
+            </Flex>
+          </BudgetProvider>
         </Provider>
       </body>
     </html>
